@@ -43,8 +43,6 @@ class System
         if (!empty($arguments)) {
             $myStemPath .= ' '.implode(' ', $arguments);
         }
-
-        dd($myStemPath);
         
         $descriptorSpec = [
             ['pipe', 'r'], //0 - stdIn
@@ -253,6 +251,8 @@ class System
             // attempt to download from first run
             self::downloadMystem([$letter]);
         }
+
+        dd($binaryPath);
 
         if (!file_exists($binaryPath)) {
             throw new MyStemNotFoundException('The bin file myStem does not exist');
