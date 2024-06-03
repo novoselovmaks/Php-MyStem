@@ -44,6 +44,8 @@ class System
             $myStemPath .= ' '.implode(' ', $arguments);
         }
 
+        dd($myStemPath);
+        
         $descriptorSpec = [
             ['pipe', 'r'], //0 - stdIn
             ['pipe', 'w'], //1 - stdOut
